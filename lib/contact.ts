@@ -22,7 +22,7 @@ const DEFAULT_CONTACT: ContactSettings = {
   whatsappUrl: '',
   whatsappExtendUrl: '',
   telegramUrl: 'https://t.me/imd_app_pk',
-  instagramUrl: 'https://www.instagram.com/imd_app_pk',
+  instagramUrl: 'https://www.instagram.com/imd.app.pk',
   youtubeUrl: 'https://youtube.com/@imdapppk',
   facebookUrl: 'https://www.facebook.com/iMDAppPak',
   supportEmail: 'support@imdapp.com.pk',
