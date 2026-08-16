@@ -533,8 +533,8 @@ function AppleCard() {
     Until then, we recommend using the{" "}
     <strong className="text-[#0e3b77]">iMD Web App</strong>, which provides
     the same seamless experience directly from your browser. It can
-    also be added to your Home Screen or to your Dock
-    on macOS for an App-like experience.
+    also be added to your Home Screen or Dock
+    for an App-like experience.
   </p>
 </div>
       <div className="mb-6 sm:mb-7">
