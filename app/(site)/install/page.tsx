@@ -525,7 +525,7 @@ function AppleCard() {
       App Store Update:
     </strong>{" "}
     The iMD App is Temporarily Unavailable on the App Store for New
-    installations. It is expected to be available again in the few
+    installations. It is expected to be available again in few
     days.
   </p>
 
