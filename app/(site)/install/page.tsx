@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { type ReactNode } from 'react'
-import { Download, PlayCircle, ExternalLink, Smartphone, Monitor, Apple } from 'lucide-react'
+import { Download, PlayCircle, ExternalLink, Smartphone, Monitor, Apple, Globe } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import SrOnlyBreadcrumb from '@/components/SrOnlyBreadcrumb'
 import { breadcrumbSchema, webPageSchema } from '@/lib/seo/json-ld'
@@ -10,8 +10,8 @@ import { getInstallSettings } from '@/lib/install'
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Download & Install iMD App',
-  description:
-    'Step-by-step instructions to download and install the iMD App on Android, Windows, iPhone, iPad and macOS. Get the APK, video tutorials and activation portal.',
+description:
+'Step-by-step instructions to use the iMD App on Android, Windows, iMD Web App, iPhone, iPad and MacOS. Download the APK, access the Web App and watch installation tutorials.',
   path: '/install',
   keywords: [
     'iMD App download',
@@ -22,6 +22,7 @@ export const metadata: Metadata = buildPageMetadata({
     'iMD App iPhone',
     'iMD App iPad',
     'iMD App macOS',
+    'iMD Web App',
     'Medical Study App',
   ],
 })
@@ -34,6 +35,10 @@ const APPLE_VIDEO_URL =
   'https://youtube.com/shorts/nDEhK4TDBH8?si=R1FcK68lDEp_PIjD'
 const APPLE_VIDEO_ID = 'nDEhK4TDBH8'
 const APPLE_PORTAL_URL = 'https://en.imedicaldoctor.net/dl'
+const WEBAPP_URL = 'https://imdweb.org'
+const WEBAPP_VIDEO_URL =
+  'https://youtube.com/shorts/sKPnC9RBYFQ?si=Ituofi9Xv7CHMha-'
+const WEBAPP_VIDEO_ID = 'sKPnC9RBYFQ'
 
 const EMULATORS = [
   { name: 'BlueStacks', url: 'https://www.bluestacks.com/' },
@@ -44,6 +49,7 @@ const EMULATORS = [
 const QUICK_LINKS = [
   { label: 'Android', href: '#android' },
   { label: 'Windows', href: '#windows' },
+  { label: 'Web App', href: '#webapp' },
   { label: 'iPhone / iPad / macOS', href: '#apple' },
 ] as const
 
@@ -348,6 +354,153 @@ function WindowsCard({ downloadApkUrl }: { downloadApkUrl: string }) {
   )
 }
 
+function WebAppCard({ downloadApkUrl }: { downloadApkUrl: string }) {
+  return (
+    <PlatformCard
+      id="webapp"
+      emoji="🌐"
+      icon={<Globe size={22} aria-hidden="true" />}
+      title="How to Use iMD Web App"
+      subtitle="Access iMD directly from your browser on any device."
+    >
+      <div className="mb-6 sm:mb-7">
+        <h3 className="text-[13.5px] sm:text-[14.5px] font-semibold text-[#0e3b77]">
+          Video Tutorial
+        </h3>
+        <p className="mt-1.5 text-[13px] sm:text-[14px] text-slate-700 leading-relaxed">
+          Watch the step-by-step tutorial on YouTube before you begin.
+        </p>
+        <div className="mt-3">
+          <YouTubeEmbed
+            id={WEBAPP_VIDEO_ID}
+            title="How to use iMD Web App"
+          />
+        </div>
+        <div className="mt-4">
+          <SecondaryButton
+            href={WEBAPP_VIDEO_URL}
+            icon={<PlayCircle size={18} aria-hidden="true" />}
+          >
+            Watch on YouTube
+          </SecondaryButton>
+        </div>
+      </div>
+
+      <h3 className="text-[13.5px] sm:text-[14.5px] font-semibold text-[#0e3b77] mb-4">
+  Steps
+</h3>
+
+<ol className="flex flex-col gap-5">
+  <Step n={1} title="Open the iMD Web App">
+    <p>
+      Open the iMD Web App in your browser using the button below.
+    </p>
+    <div className="pt-1">
+      <PrimaryButton
+        href={WEBAPP_URL}
+        icon={<ExternalLink size={18} aria-hidden="true" />}
+      >
+        Open Web App
+      </PrimaryButton>
+    </div>
+  </Step>
+
+  <Step n={2} title="Log in">
+    <p>
+      Log in using your{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        username and password
+      </strong>.
+    </p>
+  </Step>
+
+  <Step n={3} title="Accept the User Agreement">
+    <p>
+      Accept the User Agreement to continue.
+    </p>
+  </Step>
+
+  <Step n={4} title="Go to Downloads">
+    <p>
+      Open the{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Downloads
+      </strong>{" "}
+      tab.
+    </p>
+  </Step>
+
+  <Step n={5} title="Search for your database">
+    <p>
+      Search for your desired database (for example,{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        UWorld Step 1 Qbank
+      </strong>
+      ).
+    </p>
+  </Step>
+
+  <Step n={6} title="Download the latest version">
+    <p>
+      Download the latest available version (for example,{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        March 2026
+      </strong>
+      ).
+    </p>
+  </Step>
+
+  <Step n={7} title="Activate the database">
+    <p>
+      Tap{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Activate
+      </strong>{" "}
+      next to the downloaded database.
+    </p>
+  </Step>
+
+  <Step n={8} title="Open Question Bank">
+    <p>
+      Open the{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Question Bank
+      </strong>{" "}
+      and tap the{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Tests
+      </strong>{" "}
+      tab.
+    </p>
+  </Step>
+
+  <Step n={9} title="Customize your test">
+    <p>
+      Select your preferred{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Mode, Filters, Difficulty
+      </strong>{" "}
+      and{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Number of Questions
+      </strong>.
+    </p>
+  </Step>
+
+  <Step n={10} title="Start studying">
+    <p>
+      Tap{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        Create Test
+      </strong>{" "}
+      to begin your study session.
+    </p>
+  </Step>
+</ol>
+</PlatformCard>
+  )
+}
+
 function AppleCard() {
   return (
     <PlatformCard
@@ -482,8 +635,8 @@ export default async function InstallPage() {
         data={[
           webPageSchema({
             name: 'Download & Install iMD App',
-            description:
-              'Step-by-step instructions to download and install the iMD App on Android, Windows, iPhone, iPad and macOS.',
+           description:
+'Step-by-step instructions to use the iMD App on Android, Windows, iMD Web App, iPhone, iPad and MacOS.',
             path: '/install',
           }),
           breadcrumbSchema(breadcrumbs),
@@ -523,6 +676,7 @@ export default async function InstallPage() {
         <div className="mx-auto px-4 sm:px-6 max-w-[720px] flex flex-col gap-6 sm:gap-8">
           <AndroidCard downloadApkUrl={downloadApkUrl} />
           <WindowsCard downloadApkUrl={downloadApkUrl} />
+          <WebAppCard />
           <AppleCard />
         </div>
       </section>
