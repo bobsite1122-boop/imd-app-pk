@@ -354,7 +354,7 @@ function WindowsCard({ downloadApkUrl }: { downloadApkUrl: string }) {
   )
 }
 
-function WebAppCard({ downloadApkUrl }: { downloadApkUrl: string }) {
+function WebAppCard() {
   return (
     <PlatformCard
       id="webapp"
