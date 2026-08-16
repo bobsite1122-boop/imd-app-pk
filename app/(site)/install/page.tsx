@@ -510,6 +510,24 @@ function AppleCard() {
       title="How to Use iMD App on iPhone, iPad & macOS"
       subtitle="Activate via the iMD portal and the Labrange companion app."
     >
+      <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+  <p className="text-[13px] sm:text-[14px] leading-relaxed text-slate-700">
+    <strong className="text-[#0e3b77]">
+      App Store Update:
+    </strong>{" "}
+    The iMD App is temporarily unavailable on the App Store for new
+    installations. It is expected to be available again in the next few
+    days.
+  </p>
+
+  <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-slate-700">
+    Until then, we recommend using the{" "}
+    <strong className="text-[#0e3b77]">iMD Web App</strong>, which provides
+    the same seamless study experience directly from your browser. It can
+    also be added to your Home Screen on iPhone and iPad, or to your Dock
+    on macOS for an app-like experience. 0
+  </p>
+</div>
       <div className="mb-6 sm:mb-7">
         <h3 className="text-[13.5px] sm:text-[14.5px] font-semibold text-[#0e3b77]">
           Video Tutorial
