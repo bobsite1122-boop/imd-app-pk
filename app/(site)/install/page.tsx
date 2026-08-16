@@ -515,17 +515,17 @@ function AppleCard() {
     <strong className="text-[#0e3b77]">
       App Store Update:
     </strong>{" "}
-    The iMD App is temporarily unavailable on the App Store for new
-    installations. It is expected to be available again in the next few
+    The iMD App is Temporarily Unavailable on the App Store for New
+    installations. It is expected to be available again in the few
     days.
   </p>
 
   <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-slate-700">
     Until then, we recommend using the{" "}
     <strong className="text-[#0e3b77]">iMD Web App</strong>, which provides
-    the same seamless study experience directly from your browser. It can
-    also be added to your Home Screen on iPhone and iPad, or to your Dock
-    on macOS for an app-like experience. 0
+    the same seamless experience directly from your browser. It can
+    also be added to your Home Screen or to your Dock
+    on macOS for an App-like experience.
   </p>
 </div>
       <div className="mb-6 sm:mb-7">
