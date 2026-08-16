@@ -386,26 +386,41 @@ function WebAppCard() {
         </div>
       </div>
 
-      <h3 className="text-[13.5px] sm:text-[14.5px] font-semibold text-[#0e3b77] mb-4">
-  Steps
-</h3>
-
-<ol className="flex flex-col gap-5">
+      <ol className="flex flex-col gap-5">
   <Step n={1} title="Open the iMD Web App">
     <p>
-      Open the iMD Web App in your browser using the button below.
+      Visit the iMD Web App using your preferred browser.{" "}
+      <strong className="font-semibold text-[#0e3b77]">
+        For Apple users, we recommend using Safari
+      </strong>{" "}
+      for the best experience and to enable installation as a web app.
     </p>
     <div className="pt-1">
       <PrimaryButton
         href={WEBAPP_URL}
         icon={<ExternalLink size={18} aria-hidden="true" />}
       >
-        Open Web App
+        Open iMD Web App
       </PrimaryButton>
     </div>
   </Step>
 
-  <Step n={2} title="Log in">
+  <Step n={2} title="Install the Web App">
+    <p>
+      <strong className="font-semibold text-[#0e3b77]">
+        If you're an Apple user,
+      </strong>{" "}
+      tap the <strong>Share</strong> button in Safari and select{" "}
+      <strong>Add to Home Screen</strong> on iPhone or iPad, or{" "}
+      <strong>Add to Dock</strong> on macOS.
+    </p>
+    <p>
+      For Windows and other devices, simply continue using the Web App
+      directly from your browser.
+    </p>
+  </Step>
+
+  <Step n={3} title="Log in">
     <p>
       Log in using your{" "}
       <strong className="font-semibold text-[#0e3b77]">
@@ -414,13 +429,11 @@ function WebAppCard() {
     </p>
   </Step>
 
-  <Step n={3} title="Accept the User Agreement">
-    <p>
-      Accept the User Agreement to continue.
-    </p>
+  <Step n={4} title="Accept the User Agreement">
+    <p>Accept the User Agreement to continue.</p>
   </Step>
 
-  <Step n={4} title="Go to Downloads">
+  <Step n={5} title="Go to Downloads">
     <p>
       Open the{" "}
       <strong className="font-semibold text-[#0e3b77]">
@@ -430,27 +443,23 @@ function WebAppCard() {
     </p>
   </Step>
 
-  <Step n={5} title="Search for your database">
+  <Step n={6} title="Search for your Database">
     <p>
       Search for your desired database (for example,{" "}
       <strong className="font-semibold text-[#0e3b77]">
-        UWorld Step 1 Qbank
+        UWorld Step 1 QBank
       </strong>
       ).
     </p>
   </Step>
 
-  <Step n={6} title="Download the latest version">
+  <Step n={7} title="Download the Latest Version">
     <p>
-      Download the latest available version (for example,{" "}
-      <strong className="font-semibold text-[#0e3b77]">
-        March 2026
-      </strong>
-      ).
+      Download the latest available version of your selected database.
     </p>
   </Step>
 
-  <Step n={7} title="Activate the database">
+  <Step n={8} title="Activate the Database">
     <p>
       Tap{" "}
       <strong className="font-semibold text-[#0e3b77]">
@@ -460,7 +469,7 @@ function WebAppCard() {
     </p>
   </Step>
 
-  <Step n={8} title="Open Question Bank">
+  <Step n={9} title="Open Question Bank">
     <p>
       Open the{" "}
       <strong className="font-semibold text-[#0e3b77]">
@@ -474,11 +483,11 @@ function WebAppCard() {
     </p>
   </Step>
 
-  <Step n={9} title="Customize your test">
+  <Step n={10} title="Customize your Test">
     <p>
       Select your preferred{" "}
       <strong className="font-semibold text-[#0e3b77]">
-        Mode, Filters, Difficulty
+        Mode, Filters, Difficulty,
       </strong>{" "}
       and{" "}
       <strong className="font-semibold text-[#0e3b77]">
@@ -487,7 +496,7 @@ function WebAppCard() {
     </p>
   </Step>
 
-  <Step n={10} title="Start studying">
+  <Step n={11} title="Start Studying">
     <p>
       Tap{" "}
       <strong className="font-semibold text-[#0e3b77]">
@@ -507,7 +516,7 @@ function AppleCard() {
       id="apple"
       emoji="🍎"
       icon={<Apple size={22} aria-hidden="true" />}
-      title="How to Use iMD App on iPhone, iPad & macOS"
+      title="How to Use iMD App on iPhone, iPad & MacOS"
       subtitle="Activate via the iMD portal and the Labrange companion app."
     >
       <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
