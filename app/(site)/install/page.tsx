@@ -29,15 +29,15 @@ description:
 
 export const revalidate = 3600
 
-const WINDOWS_VIDEO_URL = 'https://youtu.be/_KPIHa9bCF4?si=K1iLE1EeQOKa6TnI'
+const WINDOWS_VIDEO_URL = 'https://youtu.be/UtNtYFnNWOU?si=Q_7D7QmCCy-MxYjh'
 const WINDOWS_VIDEO_ID = '_KPIHa9bCF4'
 const APPLE_VIDEO_URL =
-  'https://youtube.com/shorts/nDEhK4TDBH8?si=R1FcK68lDEp_PIjD'
+  'https://youtube.com/shorts/E62acamO8Fo?si=4BEKkH4ELd_5uYmU'
 const APPLE_VIDEO_ID = 'nDEhK4TDBH8'
 const APPLE_PORTAL_URL = 'https://en.imedicaldoctor.net/dl'
 const WEBAPP_URL = 'https://imdweb.org'
 const WEBAPP_VIDEO_URL =
-  'https://youtube.com/shorts/sKPnC9RBYFQ?si=Ituofi9Xv7CHMha-'
+  'https://youtube.com/shorts/hzAQvdX4mZk?si=RNF9rjkKYFVxhvW-'
 const WEBAPP_VIDEO_ID = 'sKPnC9RBYFQ'
 
 const EMULATORS = [
